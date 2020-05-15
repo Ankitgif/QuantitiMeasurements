@@ -74,4 +74,23 @@ public class QuantityTest {
         Length inch2 = null;
         Assert.assertNotEquals(inch1,inch2);
     }
+    @Test
+    public void given1Feet1Feet_WhenTypeProper_ShouldReturnEqual() {
+        Length feet1 = new Length(Length.Unit.FEET, 1.0);
+        Length feet2 = new Length(Length.Unit.FEET, 1.0);
+        Assert.assertEquals(feet1.getClass(), feet2.getClass());
+    }
+    @Test
+    public void given1Feet1Inch_WhenTypeProper_ShouldReturnEqual() {
+        Length feet1 = new Length(Length.Unit.FEET, 1.0);
+        Length inch1 = new Length(Length.Unit.INCH, 1.0);
+        Assert.assertEquals(feet1.getClass(), inch1.getClass());
+    }
+    @Test
+    public void givenIntegerAndLength_WhenTypeProper_ShouldReturnNotEqual() {
+        Integer value = 5;
+        Length inch1 = new Length(Length.Unit.INCH, 1.0);
+        Assert.assertNotEquals(value.getClass(), inch1.getClass());
+    }
+   
 }
