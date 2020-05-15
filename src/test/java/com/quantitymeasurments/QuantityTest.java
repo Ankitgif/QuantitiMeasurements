@@ -172,5 +172,12 @@ public class QuantityTest {
         double add = Length.addLength(inch1,inch2);
         Assert.assertEquals(4,add,0.0);
     }
+    @Test
+    public void given1FeetAnd2Inch_WhenAdd_ShouldReturn14Inch(){
+        Length feet1 = new Length(Unit.FEET,1.0);
+        Length inch1 = new Length(Unit.INCH,2.0);
+        double add = Length.addLength(feet1,inch1);
+        Assert.assertEquals(14,add,0.0);
+    }
 
 }
