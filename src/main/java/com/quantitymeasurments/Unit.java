@@ -2,7 +2,7 @@ package com.quantitymeasurments;
 
 public enum Unit {
 
-    FEET(12.0),INCH(1),YARD(36);
+    FEET(12.0),INCH(1),YARD(36),CENTIMETER(0.4);
 
     double baseUnitConversion;
 
