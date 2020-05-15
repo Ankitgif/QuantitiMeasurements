@@ -158,5 +158,12 @@ public class QuantityTest {
         boolean compareCheck = inch1.compare(inch2);
         Assert.assertTrue(compareCheck);
     }
+    @Test
+    public void given2InchAnd5Centimeter_ShouldReturnEqualLength(){
+        Length inch1 = new Length(Unit.INCH,2.0);
+        Length centi1 = new Length(Unit.CENTIMETER,5.0);
+        boolean compareCheck = inch1.compare(centi1);
+        Assert.assertTrue(compareCheck);
+    }
 
 }
