@@ -117,6 +117,11 @@ public class QuantityTest {
         Length yard1 = new Length(Length.Unit.YARD,1.0);
         boolean compareCheck = feet1.compare(yard1);
         Assert.assertTrue(compareCheck);
-
+    }
+    @Test
+    public void given1FeetAnd1Yard_ShouldReturnNotEqual(){
+        Length feet1 = new Length(Length.Unit.FEET,1.0);
+        Length yard1 = new Length(Length.Unit.YARD,1.0);
+        Assert.assertNotEquals(feet1,yard1);
     }
 }
