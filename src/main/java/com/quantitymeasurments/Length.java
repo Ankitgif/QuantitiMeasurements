@@ -2,8 +2,8 @@ package com.quantitymeasurments;
 
 public class Length {
 
-      public final Unit unit;
-      public final double value;
+    private final Unit unit;
+    private final double value;
 
     public Length(Unit unit, double value) {
         this.unit = unit;
@@ -12,7 +12,8 @@ public class Length {
     }
 
     public boolean compare(Length that) {
-        return this.unit.compare(this,that);
+        return Double.compare(that.unit.getConvertedValue(that.value),
+                this.unit.getConvertedValue(this.value)) == 0;
     }
 
     @Override
