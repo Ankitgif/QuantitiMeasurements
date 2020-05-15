@@ -11,6 +11,11 @@ public class Length {
 
     }
 
+    public static double addLength(Length length1, Length length2) {
+         double addResult = length1.unit.getConvertedValue(length1.value) + length2.unit.getConvertedValue(length2.value);
+         return addResult;
+    }
+
     public boolean compare(Length that) {
         return Double.compare(that.unit.getConvertedValue(that.value),
                 this.unit.getConvertedValue(this.value)) == 0;
