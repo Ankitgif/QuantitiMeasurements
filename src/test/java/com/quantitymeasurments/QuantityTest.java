@@ -99,4 +99,16 @@ public class QuantityTest {
         boolean valueCheck = feet1.equals(feet2);
         Assert.assertFalse(valueCheck);
     }
+    @Test
+    public void givenSameReferenceFeet_ShouldReturnEqualLength() {
+        Length feet1 = new Length(Length.Unit.FEET,1.0);
+        boolean compareCheck = feet1.compare(feet1);
+        Assert.assertTrue(compareCheck);
+    }
+    @Test
+    public void givenSameReferenceInch_ShouldReturnEqualLength() {
+        Length inch1 = new Length(Length.Unit.INCH,1.0);
+        boolean compareCheck = inch1.compare(inch1);
+        Assert.assertTrue(compareCheck);
+    }
 }
