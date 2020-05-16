@@ -243,4 +243,11 @@ public class QuantityTest {
         double add = Weight.addWeight(tonne1,gram1);
         Assert.assertEquals(1001,add,0.0);
     }
+    @Test
+    public void given212FAnd100C_ShouldReturnEqualTemperature(){
+        Temperature fahrenheit1 = new Temperature(Unit.FAHRENHEIT, 212);
+        Temperature celsius1 = new Temperature(Unit.CELSIUS, 100);
+        boolean compareCheck = fahrenheit1.compare(celsius1);
+        Assert.assertTrue(compareCheck);
+    }
 }
