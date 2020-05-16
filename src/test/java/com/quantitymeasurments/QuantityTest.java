@@ -223,11 +223,11 @@ public class QuantityTest {
         Assert.assertEquals(2,add,0.0);
     }
     @Test
-    public void given1KgAnd1000grams_ShouldReturnEqualLength(){
+    public void given1KgAnd1000grams_ShouldReturnEqualWeight(){
         Weight kg1 = new Weight(Unit.KILOGRAM,1);
         Weight gram1 = new Weight(Unit.GRAM,1000);
         boolean compareCheck = kg1.compare(gram1);
         Assert.assertTrue(compareCheck);
     }
-   
+
 }
