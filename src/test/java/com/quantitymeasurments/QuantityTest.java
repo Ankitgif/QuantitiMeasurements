@@ -209,7 +209,7 @@ public class QuantityTest {
         Assert.assertTrue(compareCheck);
     }
     @Test
-    public void given1GallonAnd3point78Litre_WhenAdd_ShouldReturn7point57Litre(){
+    public void given1GallonAnd3point78Litre_WhenAdd_ShouldReturn7point56Litre(){
         Volume gallon1 = new Volume(Unit.GALLON, 1);
         Volume litre1 = new Volume(Unit.LITRE, 3.78);
         double add = Volume.addVolume(gallon1,litre1);
