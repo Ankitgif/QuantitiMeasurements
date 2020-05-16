@@ -194,4 +194,12 @@ public class QuantityTest {
         Assert.assertEquals(3,add,0.0);
 
     }
+    @Test
+    public void given1GallonAnd3point78Litre_ShouldReturnEqualVolume(){
+        Volume gallon1 = new Volume(Unit.GALLON, 1);
+        Volume litre1 = new Volume(Unit.LITRE, 3.78);
+        boolean compareCheck = gallon1.compare(litre1);
+        Assert.assertTrue(compareCheck);
+    }
+   
 }
