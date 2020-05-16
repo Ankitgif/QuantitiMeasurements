@@ -222,4 +222,12 @@ public class QuantityTest {
         double add = Volume.addVolume(litre1,millilitre1);
         Assert.assertEquals(2,add,0.0);
     }
+    @Test
+    public void given1KgAnd1000grams_ShouldReturnEqualLength(){
+        Weight kg1 = new Weight(Unit.KILOGRAM,1);
+        Weight gram1 = new Weight(Unit.GRAM,1000);
+        boolean compareCheck = kg1.compare(gram1);
+        Assert.assertTrue(compareCheck);
+    }
+   
 }
