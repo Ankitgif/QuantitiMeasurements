@@ -215,4 +215,11 @@ public class QuantityTest {
         double add = Volume.addVolume(gallon1,litre1);
         Assert.assertEquals(7.56,add,0.0);
     }
+    @Test
+    public void given1LitreAnd1000Millilitre_WhenAdd_ShouldReturn2Litre(){
+        Volume litre1 = new Volume(Unit.LITRE, 1);
+        Volume millilitre1 = new Volume(Unit.MILLILITRE, 1000);
+        double add = Volume.addVolume(litre1,millilitre1);
+        Assert.assertEquals(2,add,0.0);
+    }
 }
