@@ -12,6 +12,11 @@ public class Weight {
         this.value = value;
     }
 
+    public static double addWeight(Weight weight1, Weight weight2) {
+        double addResult = weight1.unit.getConvertedValue(weight1.value) + weight2.unit.getConvertedValue(weight2.value);
+        return addResult;
+    }
+
     public boolean compare(Weight that) {
         return Double.compare(that.unit.getConvertedValue(that.value),
                 this.unit.getConvertedValue(this.value)) == 0;
