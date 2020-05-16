@@ -12,6 +12,11 @@ public class Volume {
         this.value = value;
     }
 
+    public static double addVolume(Volume volume1, Volume volume2) {
+        double addResult = volume1.unit.getConvertedValue(volume1.value) + volume2.unit.getConvertedValue(volume2.value);
+        return addResult;
+    }
+
     public boolean compare(Volume that) {
         return Double.compare(that.unit.getConvertedValue(that.value),
                 this.unit.getConvertedValue(this.value)) == 0;
